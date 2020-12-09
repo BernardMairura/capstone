@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import Expense
+from .models import Expenses
 from . import google
 from .register import register_social_user
 
@@ -8,8 +8,8 @@ from .register import register_social_user
 class ExpensesSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Expense
-        fields = __all__
+        model = Expenses
+        fields ='__all__'
 
 
 

@@ -1,6 +1,11 @@
 from django.urls import path
 from . import views
+from .views import GoogleSocialAuthView
 
-url patterns[
+urlpatterns=[
+    path('', views.ExpenseListAPIView.as_view(), name="expenses"),
+    path('<int:id>', views.ExpenseDetailAPIView.as_view(), name="expense"),
+    path('google/', GoogleSocialAuthView.as_view()),
+   
 
 ]
