@@ -35,3 +35,5 @@ class UserManager(BaseUserManager):
         user.save()
         return user
 
+AUTH_PROVIDERS = { 'google': 'google','email': 'email'}
+
